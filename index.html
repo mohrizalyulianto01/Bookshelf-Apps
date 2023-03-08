@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bookshelft Apps</title>
+
+    <!-- My Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,700&family=Poppins:ital,wght@0,100;0,300;0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
     <!-- My Style -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -14,19 +26,15 @@
     <div class="content">
       <div class="col-1">
         <div class="user-information my-container">
-          <div class="user-img">
-            <img src="img/Rizal Yulianto.png" alt="Photo Profile" />
+          <div class="user">
+            <img
+              src="img/Rizal Yulianto.png"
+              alt="Photo Profile"
+              style="text-align: center"
+            />
           </div>
           <h1 class="user-name">M Rizal Yulianto</h1>
-          <p class="user-bio">
-            <i class="fi-sr-broom"></i> Programmer dan Content Creator
-          </p>
-          <ul>
-            <li>
-              <p>Jumlah Buku</p>
-              <h4 id="jumlahBuku">20</h4>
-            </li>
-          </ul>
+          <p class="user-bio"><i class="fi-sr-broom"></i> Pengunjung</p>
         </div>
         <!-- <div class="my-container mt-2">
           <form>
@@ -36,23 +44,16 @@
         </div> -->
         <div class="my-container icons">
           <div class="my-icon">
-            <div class="read-icon">
-              <i class="fi-rr-book-alt"></i>
-            </div>
-
-            <h5>Dibaca</h5>
-          </div>
-          <div class="my-icon">
-            <div class="unread-icon">
-              <i class="fi-rr-bookmark"></i>
-            </div>
-            <h5>Belum Dibaca</h5>
-          </div>
-          <div class="my-icon">
             <div class="add-book" id="add-book">
-              <i class="fi-sr-add"></i>
+              <i data-feather="plus-circle" class="fi-sr-add"></i>
             </div>
-            <h5>add</h5>
+            <h3>Tambahkan Buku Baru</h3>
+            <table>
+              <tr>
+                <th>Jumlah Buku</th>
+                <th id="jumlahBuku">20</th>
+              </tr>
+            </table>
           </div>
         </div>
       </div>
@@ -66,11 +67,11 @@
 
         <div class="content-book">
           <div class="unread" id="unread">
-            <h4 class="">Belum Dibaca</h4>
+            <h4 class="">Belum Selesai Dibaca</h4>
           </div>
 
           <div class="read" id="read">
-            <h4>Sudah Dibaca</h4>
+            <h4>Selesai Dibaca</h4>
           </div>
         </div>
       </div>
@@ -78,7 +79,7 @@
 
     <div id="modal">
       <section class="my-container">
-        <h2>New Book</h2>
+        <h2>Masukan Buku Baru</h2>
         <form id="form">
           <div class="input-group">
             <input
@@ -95,7 +96,7 @@
             <input
               type="text"
               id="author"
-              placeholder="Author"
+              placeholder="Penulis"
               class="input-form"
               maxlength="60"
               pattern="^[a-zA-Z0-9_ ]*$"
@@ -112,12 +113,17 @@
             />
           </div>
           <div class="button-group">
-            <button type="reset" class="close" id="close">Close</button>
-            <button type="submit" id="save">Save</button>
+            <button type="submit" id="save">Masukan Buku Ke Rak</button>
+            <button type="reset" class="close" id="close">X</button>
           </div>
         </form>
       </section>
     </div>
+
+    <!-- Feather Icons Script -->
+    <script>
+      feather.replace();
+    </script>
 
     <!-- My Script -->
     <script src="js/main.js"></script>
