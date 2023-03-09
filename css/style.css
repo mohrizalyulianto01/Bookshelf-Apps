@@ -11,10 +11,10 @@
   outline: none;
   border: none;
   text-decoration: none;
+  font-family: "Poppins", sans-serif;
 }
 body {
   background: var(--main-bg);
-  font-family: "Poppins", sans-serif;
   color: var(--primary);
 }
 
@@ -25,6 +25,22 @@ nav {
   background-color: var(--primary);
   background-attachment: fixed;
   background-position: center;
+  padding: 1rem 2%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
 }
 img {
   text-align: center;
@@ -182,6 +198,8 @@ form button {
   padding: 5px;
   width: calc(99% / 3) !important;
 }
+
+/* Menambah Buku */
 .add-book {
   display: inline-flex;
   align-items: center;
@@ -205,6 +223,7 @@ form button {
   transform: rotate(360deg);
 }
 
+/* Table */
 table,
 th,
 td {
@@ -324,6 +343,47 @@ td {
 .trash-book:hover {
   opacity: 1;
   transform: rotate(-360deg);
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 0.1rem 0;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--bg);
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  color: var(--main-bg);
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: var(--main-bg);
+  font-weight: 700;
 }
 
 @media screen and (max-width: 576px) {
